@@ -1,4 +1,5 @@
 <?php
+include_once("../is_logged_in.php");
 // include database connection file
 include_once("../config.php");
 // Get id from URL to delete that data

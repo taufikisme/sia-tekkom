@@ -37,18 +37,6 @@
 			die();
 		}
 	}
-	
-	// Fetch data
-	// $hash = mysqli_fetch_array(mysqli_query($mysqli, "SELECT * FROM admin WHERE id=2"));
-
-	// echo $hash['email'] . '<br/>';
-	// echo $hash['password'] . '<br/>';
-
-	// if (password_verify('2x2=empat', $hash['password'])) {
-	// 	echo 'Password is valid!';
-	// } else {
-	// 	echo 'Invalid password.';
-	// }
 ?>
 
 <!DOCTYPE html>
