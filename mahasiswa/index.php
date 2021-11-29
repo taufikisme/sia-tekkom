@@ -30,28 +30,29 @@
 <meta name="viewport" content="width=device-width, initial-
 scale=1.0">
 
-<title>Homepage</title>
+<title>Mahasiswa</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 </head>
 <body>
 	<?php include('../navbar.php') ?>
-	<main>
+	<main class="px-4 py-4">
 		<div>
 			<form action="" method="post" name="form">
 				<h3>Add Mahasiswa</h3>
 				<table width="25%" border="0">
 					<tr>
 						<td>NIM</td>
-						<td><input type="text" name="nim" required></td>
+						<td><input class="form-control" type="text" name="nim" required></td>
 					</tr>
 					<tr>
 						<td>Nama</td>
-						<td><input type="text" name="nama" required></td>
+						<td><input class="form-control" type="text" name="nama" required></td>
 					</tr>
 					<tr>
 						<td>Jenis Kelamin</td>
 						<td>
-							<select name="jenis_kelamin">
+							<select class="form-control" name="jenis_kelamin">
 								<option>-- Jenis Kelamin --</option>
 								<option value="laki-laki">Laki-laki</option>
 								<option value="perempuan">Perempuan</option>
@@ -60,24 +61,24 @@ scale=1.0">
 					</tr>
 					<tr>
 						<td>Tanggal Lahir</td>
-						<td><input type="date" name="tgl_lahir" required></td>
+						<td><input class="form-control" type="date" name="tgl_lahir" required></td>
 					</tr>
 					<tr>
 						<td>Kota</td>
-						<td><input type="text" name="kota" required></td>
+						<td><input class="form-control" type="text" name="kota" required></td>
 					</tr>
 					<tr>
 						<td>Provinsi</td>
-						<td><input type="text" name="provinsi" required></td>
+						<td><input class="form-control" type="text" name="provinsi" required></td>
 					</tr>
 					<tr>
 						<td>Telp</td>
-						<td><input type="text" name="telp" required></td>
+						<td><input class="form-control" type="text" name="telp" required></td>
 					</tr>
 					<tr>
 						<td>Status</td>
 						<td>
-							<select name="status">
+							<select class="form-control" name="status">
 								<option>-- Status --</option>
 								<option value="aktif">Aktif</option>
 								<option value="belum her-reg">Belum Her-reg</option>
@@ -88,32 +89,32 @@ scale=1.0">
 					</tr>
 					<tr>
 						<td>Angkatan</td>
-						<td><input type="text" name="angkatan" required></td>
+						<td><input class="form-control" type="text" name="angkatan" required></td>
 					</tr>
 					<tr>
 						<td>Semester</td>
-						<td><input type="number" name="semester" required></td>
+						<td><input class="form-control" type="number" name="semester" required></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td><input type="submit" name="submit" value="Add"></td>
+						<td><input class="btn btn-primary" type="submit" name="submit" value="Add"></td>
 					</tr>
 				</table>
 			</form>
 		</div>
-		<section>
+		<section class="mt-5">
 			<h3>Tabel Mahasiswa</h3>
 			<form action="" method="get" name="form">
 				<table width="25%" border="0">
 					<tr>
 						<td>Cari</td>
-						<td><input type="text" name="q" placeholder="Cari mahasiswa"></td>
-						<td><button type="submit" name="cari">Cari</button></td>
+						<td><input class="form-control" type="text" name="q" placeholder="Cari mahasiswa"></td>
+						<td><button class="btn btn-primary" type="submit" name="cari">Cari</button></td>
 					</tr>
 				</table>
 			</form>
 			<br/>
-			<table width='80%' border=1>
+			<table class="table" width='80%' border=1>
 			<tr>
 				<th>NIM</th>
 				<th>Nama</th>
@@ -139,7 +140,7 @@ scale=1.0">
 					echo "<td>".$item['status']."</td>";
 					echo "<td>".$item['angkatan']."</td>";
 					echo "<td>".$item['semester']."</td>";
-					echo "<td><a href='/mahasiswa/editMahasiswa.php?nim=$item[nim]'>Edit</a> | <a href='/mahasiswa/deleteMahasiswa.php?nim=$item[nim]'>Delete</a></td>";
+					echo "<td><a class='btn btn-warning' href='/mahasiswa/editMahasiswa.php?nim=$item[nim]'>Edit</a> | <a href='/mahasiswa/deleteMahasiswa.php?nim=$item[nim]' class='btn btn-danger'>Delete</a></td>";
 					echo "<tr>";
 				}
 			?>
@@ -147,9 +148,9 @@ scale=1.0">
 			</table>
 		</section>
 
-		<section>
+		<section class="mt-5">
 			<h3>Trash Mahasiswa</h3>
-			<table width='80%' border=1>
+			<table class="table" width='80%' border=1>
 			<tr>
 				<th>NIM</th>
 				<th>Nama</th>
@@ -175,7 +176,7 @@ scale=1.0">
 					echo "<td>".$item['status']."</td>";
 					echo "<td>".$item['angkatan']."</td>";
 					echo "<td>".$item['semester']."</td>";
-					echo "<td><a href='/mahasiswa/restoreMahasiswa.php?nim=$item[nim]'>Restore</a> | <a href='/mahasiswa/destroyMahasiswa.php?nim=$item[nim]'>Destroy</a></td>";
+					echo "<td><a href='/mahasiswa/restoreMahasiswa.php?nim=$item[nim]' class='btn btn-success'>Restore</a> | <a href='/mahasiswa/destroyMahasiswa.php?nim=$item[nim]' class='btn btn-danger'>Destroy</a></td>";
 					echo "<tr>";
 				}
 			?>

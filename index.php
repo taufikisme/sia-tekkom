@@ -19,13 +19,15 @@ scale=1.0">
 
 <title>Homepage</title>
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 </head>
 <body>
 	<?php include('navbar.php') ?>
-	<main>
+	<main class="mx-4 pb-5 mt-5">
 		<section>
 			<h3>Tabel Mahasiswa</h3>
-			<table width='80%' border=1>
+			<table class="table" width='80%' border=1>
 			<tr>
 				<th>NIM</th>
 				<th>Nama</th>
@@ -59,7 +61,7 @@ scale=1.0">
 
 		<section>
 			<h3>Tabel Dosen</h3>
-			<table width='80%' border=1>
+			<table class="table" width='80%' border=1>
 			<tr>
 				<th>NIDN</th>
 				<th>Nama</th>
@@ -83,7 +85,7 @@ scale=1.0">
 
 		<section>
 			<h3>Tabel Mata Kuliah</h3>
-			<table width='80%' border=1>
+			<table class="table" width='80%' border=1>
 			<tr>
 				<th>Kode</th>
 				<th>Nama</th>

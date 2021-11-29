@@ -16,15 +16,16 @@
 <meta name="viewport" content="width=device-width, initial-
 scale=1.0">
 
-<title>Homepage</title>
+<title>Rencana Studi</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 </head>
 <body>
 	<?php include('../navbar.php') ?>
-	<main>
+	<main class="px-4 py-4">
 		<section>
 			<h3>Tabel Rencana Studi</h3>
-			<table width='80%' border=1>
+			<table class="table" width='80%' border=1>
 			<tr>
 				<th>Nama Mahasiswa</th>
 				<th>Tahun Ajaran</th>

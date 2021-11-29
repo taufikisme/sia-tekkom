@@ -73,28 +73,28 @@ while($mahasiswa = mysqli_fetch_array($result))
 <meta name="viewport" content="width=device-width, initial-
 scale=1.0">
 
-<title>Homepage</title>
-
+<title>Edit Mahasiswa</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
 	<?php include('../navbar.php') ?>
-	<main>
+	<main class="px-4 py-4">
 		<div>
 			<form action="" method="post" name="form">
 				<h3>Add Mahasiswa</h3>
 				<table width="25%" border="0">
 					<tr>
 						<td>NIM</td>
-						<td><input type="text" name="nim" value="<?= $nim ?>" required readonly></td>
+						<td><input class="form-control" type="text" name="nim" value="<?= $nim ?>" required readonly></td>
 					</tr>
 					<tr>
 						<td>Nama</td>
-						<td><input type="text" name="nama" value="<?= $nama ?>" required></td>
+						<td><input class="form-control" type="text" name="nama" value="<?= $nama ?>" required></td>
 					</tr>
 					<tr>
 						<td>Jenis Kelamin</td>
 						<td>
-							<select name="jenis_kelamin">
+							<select class="form-control" name="jenis_kelamin">
 								<?php if ($jenis_kelamin == "laki-laki"): ?>
 								<option value="laki-laki" selected>Laki-laki</option>
 								<?php else: ?>
@@ -110,24 +110,24 @@ scale=1.0">
 					</tr>
 					<tr>
 						<td>Tanggal Lahir</td>
-						<td><input type="date" name="tgl_lahir" value="<?= $tgl_lahir ?>" required></td>
+						<td><input class="form-control" type="date" name="tgl_lahir" value="<?= $tgl_lahir ?>" required></td>
 					</tr>
 					<tr>
 						<td>Kota</td>
-						<td><input type="text" name="kota" value="<?= $kota ?>" required></td>
+						<td><input class="form-control" type="text" name="kota" value="<?= $kota ?>" required></td>
 					</tr>
 					<tr>
 						<td>Provinsi</td>
-						<td><input type="text" name="provinsi" value="<?= $provinsi ?>" required></td>
+						<td><input class="form-control" type="text" name="provinsi" value="<?= $provinsi ?>" required></td>
 					</tr>
 					<tr>
 						<td>Telp</td>
-						<td><input type="text" name="telp" value="<?= $telp ?>" required></td>
+						<td><input class="form-control" type="text" name="telp" value="<?= $telp ?>" required></td>
 					</tr>
 					<tr>
 						<td>Status</td>
 						<td>
-							<select name="status">
+							<select class="form-control" name="status">
 								<?php if ($status == "aktif"): ?>
 								<option value="aktif" selected>Aktif</option>
 								<?php else: ?>
@@ -156,15 +156,15 @@ scale=1.0">
 					</tr>
 					<tr>
 						<td>Angkatan</td>
-						<td><input type="text" name="angkatan" value="<?= $angkatan ?>" required></td>
+						<td><input class="form-control" type="text" name="angkatan" value="<?= $angkatan ?>" required></td>
 					</tr>
 					<tr>
 						<td>Semester</td>
-						<td><input type="number" name="semester" value="<?= $semester ?>" required></td>
+						<td><input class="form-control" type="number" name="semester" value="<?= $semester ?>" required></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td><input type="submit" name="update" value="Update"></td>
+						<td><input class="btn btn-primary" type="submit" name="update" value="Update"></td>
 					</tr>
 				</table>
 			</form>

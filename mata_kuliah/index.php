@@ -31,36 +31,37 @@
 <meta name="viewport" content="width=device-width, initial-
 scale=1.0">
 
-<title>Homepage</title>
+<title>Mata Kuliah</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 </head>
 <body>
 	<?php include('../navbar.php') ?>
-	<main>
+	<main class="px-4 py-4">
 	<div>
 			<form action="" method="post" name="form">
 				<h3>Add Mata Kuliah</h3>
 				<table width="25%" border="0">
 					<tr>
 						<td>Kode</td>
-						<td><input type="number" name="kode_mk" required></td>
+						<td><input class="form-control" type="number" name="kode_mk" required></td>
 					</tr>
 					<tr>
 						<td>Nama</td>
-						<td><input type="text" name="nama_mk" required></td>
+						<td><input class="form-control" type="text" name="nama_mk" required></td>
 					</tr>
 					<tr>
 						<td>Kuota</td>
-						<td><input type="number" name="kuota_mk" required></td>
+						<td><input class="form-control" type="number" name="kuota_mk" required></td>
 					</tr>
 					<tr>
 						<td>SKS</td>
-						<td><input type="number" name="sks_mk" required></td>
+						<td><input class="form-control" type="number" name="sks_mk" required></td>
 					</tr>
 					<tr>
 						<td>Status</td>
 						<td>
-							<select name="status_mk">
+							<select class="form-control" name="status_mk">
 								<option>-- Status --</option>
 								<option value="ditawarkan">Ditawarkan</option>
 								<option value="nonaktif">Nonaktif</option>
@@ -69,40 +70,40 @@ scale=1.0">
 					</tr>
 					<tr>
 						<td>Kurikulum</td>
-						<td><input type="text" name="kurikulum_mk" required></td>
+						<td><input class="form-control" type="text" name="kurikulum_mk" required></td>
 					</tr>
 					<tr>
 						<td>Hari</td>
-						<td><input type="text" name="hari" required></td>
+						<td><input class="form-control" type="text" name="hari" required></td>
 					</tr>
 					<tr>
 						<td>Waktu</td>
-						<td><input type="text" name="waktu" required></td>
+						<td><input class="form-control" type="text" name="waktu" required></td>
 					</tr>
 					<tr>
 						<td>NIDN</td>
-						<td><input type="number" name="nidn" required></td>
+						<td><input class="form-control" type="number" name="nidn" required></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td><input type="submit" name="submit" value="Add"></td>
+						<td><input class="btn btn-primary" type="submit" name="submit" value="Add"></td>
 					</tr>
 				</table>
 			</form>
 		</div>
-		<section>
+		<section class="mt-5">
 			<h3>Tabel Mata Kuliah</h3>
 			<form action="" method="get" name="form">
 				<table width="25%" border="0">
 					<tr>
 						<td>Cari</td>
-						<td><input type="text" name="q" placeholder="Cari Mata Kuliah"></td>
-						<td><button type="submit" name="cari">Cari</button></td>
+						<td><input class="form-control" type="text" name="q" placeholder="Cari Mata Kuliah"></td>
+						<td><button class="btn btn-primary" type="submit" name="cari">Cari</button></td>
 					</tr>
 				</table>
 			</form>
 			<br/>
-			<table width='80%' border=1>
+			<table class="table" width='80%' border=1>
 			<tr>
 				<th>Kode</th>
 				<th>Nama</th>
@@ -134,9 +135,9 @@ scale=1.0">
 			</table>
 		</section>
 
-		<section>
+		<section class="mt-5">
 			<h3>Trash Mata Kuliah</h3>
-			<table width='80%' border=1>
+			<table class="table" width='80%' border=1>
 			<tr>
 				<th>Kode</th>
 				<th>Nama</th>

@@ -20,12 +20,13 @@
 <meta name="viewport" content="width=device-width, initial-
 scale=1.0">
 
-<title>Homepage</title>
+<title>Add Rencana Studi</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 </head>
 <body>
 	<?php include('../navbar.php') ?>
-	<main>
+	<main class="px-4 py-4">
 	<div>
 			<form action="" method="post" name="form">
 				<input type="hidden" name="id_admin" value="1" />
@@ -33,12 +34,12 @@ scale=1.0">
 				<table width="25%" border="0">
 					<tr>
 						<td>NIM</td>
-						<td><input type="number" name="nim" value="<?= $mhs['nim'] ?>" readonly required></td>
+						<td><input class="form-control" type="number" name="nim" value="<?= $mhs['nim'] ?>" readonly required></td>
 					</tr>
 					<tr>
 						<td>Kode MK</td>
 						<td>
-							<select name="kode_mk" required>
+							<select class="form-control" name="kode_mk" required>
 								<option>-- Mata Kuliah --</option>
 								<?php while($item = mysqli_fetch_array($matkul)): ?>
 								<option value="<?= $item['kode_mk'] ?>"><?= $item['nama_mk'] ?></option>
@@ -49,7 +50,7 @@ scale=1.0">
 					<tr>
 						<td>Status</td>
 						<td>
-							<select name="status" required>
+							<select class="form-control" name="status" required>
 								<option>-- Status --</option>
 								<option value="wajib">Wajib</option>
 								<option value="pilihan">Pilihan</option>
@@ -60,26 +61,26 @@ scale=1.0">
 					</tr>
 					<tr>
 						<td>Tahun Ajaran</td>
-						<td><input type="text" name="tahun_ajaran" required></td>
+						<td><input class="form-control" type="text" name="tahun_ajaran" required></td>
 					</tr>
 					<tr>
 						<td>Semester</td>
-						<td><input type="number" name="semester" value="<?= $mhs['semester'] ?>" readonly/></td>
+						<td><input class="form-control" type="number" name="semester" value="<?= $mhs['semester'] ?>" readonly/></td>
 					</tr>
 					<tr>
 						<td>Status Persetujuan</td>
-						<td><input type="text" name="status_persetujuan" value="belum" readonly/></td>
+						<td><input class="form-control" type="text" name="status_persetujuan" value="belum" readonly/></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td><input type="submit" name="submit" value="Add"></td>
+						<td><input class="btn btn-primary" type="submit" name="submit" value="Add"></td>
 					</tr>
 				</table>
 			</form>
 		</div>
-		<section>
+		<section class="mt-4">
 			<h3>Tabel Rencana Studi</h3>
-			<table width='80%' border=1>
+			<table class="table" width='80%' border=1>
 			<tr>
 				<th>Nama Mahasiswa</th>
 				<th>Mata Kuliah</th>

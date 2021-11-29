@@ -30,52 +30,52 @@
 <meta name="viewport" content="width=device-width, initial-
 scale=1.0">
 
-<title>Homepage</title>
-
+<title>Dosen</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
 	<?php include('../navbar.php') ?>
-	<main>
+	<main class="px-4 py-4">
 	<div>
 			<form action="" method="post" name="form">
 				<h3>Add Dosen</h3>
 				<table width="25%" border="0">
 					<tr>
 						<td>NIDN</td>
-						<td><input type="num" name="nidn" required></td>
+						<td><input class="form-control" type="num" name="nidn" required></td>
 					</tr>
 					<tr>
 						<td>Nama</td>
-						<td><input type="text" name="nama" required></td>
+						<td><input class="form-control" type="text" name="nama" required></td>
 					</tr>
 					<tr>
 						<td>Alamat</td>
-						<td><input type="text" name="alamat" required></td>
+						<td><input class="form-control" type="text" name="alamat" required></td>
 					</tr>
 					<tr>
 						<td>Telp</td>
-						<td><input type="text" name="telp" required></td>
+						<td><input class="form-control" type="text" name="telp" required></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td><input type="submit" name="submit" value="Add"></td>
+						<td><input class="btn btn-primary" type="submit" name="submit" value="Add"></td>
 					</tr>
 				</table>
 			</form>
 		</div>
-		<section>
+		<section class="mt-5">
 			<h3>Tabel Dosen</h3>
 			<form action="" method="get" name="form">
 				<table width="25%" border="0">
 					<tr>
 						<td>Cari</td>
-						<td><input type="text" name="q" placeholder="Cari Dosen"></td>
-						<td><button type="submit" name="cari">Cari</button></td>
+						<td><input class="form-control" type="text" name="q" placeholder="Cari Dosen"></td>
+						<td><button class="btn btn-primary" type="submit" name="cari">Cari</button></td>
 					</tr>
 				</table>
 			</form>
 			<br/>
-			<table width='80%' border=1>
+			<table class="table" width='80%' border=1>
 			<tr>
 				<th>NIDN</th>
 				<th>Nama</th>
@@ -99,9 +99,9 @@ scale=1.0">
 			</table>
 		</section>
 
-		<section>
+		<section class="mt-4">
 			<h3>Trash Dosen</h3>
-			<table width='80%' border=1>
+			<table class="table" width='80%' border=1>
 			<tr>
 				<th>NIDN</th>
 				<th>Nama</th>
