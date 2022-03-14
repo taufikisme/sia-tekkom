@@ -140,7 +140,8 @@ scale=1.0">
 					echo "<td>".$item['status']."</td>";
 					echo "<td>".$item['angkatan']."</td>";
 					echo "<td>".$item['semester']."</td>";
-					echo "<td><a class='btn btn-warning' href='/mahasiswa/editMahasiswa.php?nim=$item[nim]'>Edit</a> | <a href='/mahasiswa/deleteMahasiswa.php?nim=$item[nim]' class='btn btn-danger'>Delete</a></td>";
+					// echo "<td><a class='btn btn-warning' href='/mahasiswa/editMahasiswa.php?nim=$item[nim]'>Edit</a> | <a href='/mahasiswa/deleteMahasiswa.php?nim=$item[nim]' class='btn btn-danger'>Delete</a></td>";
+					echo "<td><a class='btn btn-warning' href='/mahasiswa/editMahasiswa.php?nim=$item[nim]'>Edit</a> | <button onclick='showAlert($item[nim])' class='btn btn-danger'>Delete</button></td>";
 					echo "<tr>";
 				}
 			?>
@@ -183,6 +184,18 @@ scale=1.0">
 
 			</table>
 		</section>
+		<script>
+			function showAlert(id){
+				if (confirm('Apakah Anda yakin ingin menghapus?')) {
+				// Save it!
+				console.log('Thing was saved to the database.');
+				window.location.href = "/mahasiswa/deleteMahasiswa.php?nim=" + id;
+				} else {
+				// Do nothing!
+				console.log('Thing was not saved to the database.');
+				}
+			}
+		</script>
 	</main>
 </html>
 
