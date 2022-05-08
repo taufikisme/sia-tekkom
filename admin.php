@@ -23,7 +23,7 @@
 				$row = mysqli_fetch_array($result);
 				if (password_verify($password, $row['password'])){
 					$_SESSION['nama'] = $row['nama'];
-					echo 'Anda Berhasil Login!';
+					echo 'Berhasil Login!';
 					header("Location:/");
 				} else {
 					echo 'Password salah!';
